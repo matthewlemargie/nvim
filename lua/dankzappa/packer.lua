@@ -26,6 +26,13 @@ return require('packer').startup(function(use)
       requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
+  use({
+      "andrewferrier/wrapping.nvim",
+      config = function()
+          require("wrapping").setup()
+      end,
+  })
+
   use {
       'VonHeikemen/lsp-zero.nvim',
       branch = 'v3.x',
