@@ -58,4 +58,6 @@ return require('packer').startup(function(use)
         "neovim/nvim-lspconfig",
     }
 
+    use {'akinsho/bufferline.nvim', tag = "*", requires = 'nvim-tree/nvim-web-devicons'}
+
 end)
