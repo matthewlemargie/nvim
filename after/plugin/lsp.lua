@@ -13,3 +13,14 @@ require('mason-lspconfig').setup({
     lsp_zero.default_setup,
   },
 })
+
+require'lspconfig'.clangd.setup{
+    cmd = { "clangd", "--header-insertion=never" }, -- Any additional clangd flags
+    filetypes = { "c", "cpp", "objc", "objcpp" },
+    root_dir = require'lspconfig'.util.root_pattern("compile_commands.json", "compile_flags.txt", ".git"),
+    settings = {
+        clangd = {
+            args = {},
+        },
+    },
+}
