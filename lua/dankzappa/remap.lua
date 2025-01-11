@@ -68,3 +68,5 @@ vim.keymap.set("n", "<leader>-", "^i-- <C-c>j^")
 vim.keymap.set("n", "<leader>u#", "^xxj^")
 vim.keymap.set("n", "<leader>u/", "^xxxj^")
 vim.keymap.set("n", "<leader>u-", "^xxxj^")
+
+vim.keymap.set("v", "<leader>y", "\"+y")
