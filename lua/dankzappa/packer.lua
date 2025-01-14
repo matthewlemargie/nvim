@@ -13,6 +13,28 @@ return require('packer').startup(function(use)
 
     use 'mbbill/undotree'
 
+    -- use {
+        -- 'nanozuki/tabby.nvim',
+        -- config = function()
+            -- local tabby = require('tabby')
+            -- tabby.setup({
+                -- tabline = function()
+                    -- local tabline = require('tabby.presets').active_wins_at_tail
+                    -- -- Customize to show only filenames
+                    -- return tabline({
+                        -- tab_name = function(tabid)
+                            -- local winid = vim.api.nvim_tabpage_get_win(tabid)
+                            -- local bufid = vim.api.nvim_win_get_buf(winid)
+                            -- local filename = vim.api.nvim_buf_get_name(bufid)
+                            -- return vim.fn.fnamemodify(filename, ':t') -- Get only the filename
+                        -- end
+                    -- })
+                -- end,
+            -- })
+        -- end,
+    -- }
+
+
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.4',
         -- or                            , branch = '0.1.x',

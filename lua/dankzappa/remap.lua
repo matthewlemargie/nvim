@@ -65,8 +65,22 @@ vim.keymap.set("n", "<leader>/", "^i// <C-c>j^")
 vim.keymap.set("n", "<leader>-", "^i-- <C-c>j^")
 
 -- uncommenting
-vim.keymap.set("n", "<leader>u#", "^xxj^")
-vim.keymap.set("n", "<leader>u/", "^xxxj^")
-vim.keymap.set("n", "<leader>u-", "^xxxj^")
+vim.keymap.set("n", "<leader>d#", "^xxj^")
+vim.keymap.set("n", "<leader>d/", "^xxxj^")
+vim.keymap.set("n", "<leader>d-", "^xxxj^")
 
 vim.keymap.set("v", "<leader>y", "\"+y")
+
+-- Find definition
+vim.keymap.set('n', '<leader>fd', '<cmd>Telescope lsp_definitions<cr>')
+
+-- Find references
+vim.keymap.set('n', '<leader>fr', '<cmd>Telescope lsp_references<cr>')
+
+-- Find symbols
+vim.keymap.set('n', '<leader>fs', '<cmd>Telescope lsp_workspace_symbols<cr>')
+
+-- search and replace
+vim.keymap.set('n', '<leader>ss', ':%s/\\<<C-r><C-w>\\>//gI<Left><Left><Left>')
+vim.keymap.set('n', '<leader>sa', ':%s/<C-r><C-w>//gI<Left><Left><Left>')
+vim.keymap.set('n', '<leader>si', ':%s/<C-r><C-w>//gi<Left><Left><Left>')
