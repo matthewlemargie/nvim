@@ -85,9 +85,22 @@ vim.keymap.set('n', '<leader>ss', ':%s/\\<<C-r><C-w>\\>//gI<Left><Left><Left>')
 vim.keymap.set('n', '<leader>sa', ':%s/<C-r><C-w>//gI<Left><Left><Left>')
 vim.keymap.set('n', '<leader>si', ':%s/<C-r><C-w>//gi<Left><Left><Left>')
 
+-- vim.fugitive 
 vim.keymap.set('n', '<leader>dg', ':Git<CR>')
 vim.keymap.set('n', '<leader>dw', ':Gwrite<CR>')
 vim.keymap.set('n', '<leader>dc', ':Git commit<CR>')
 vim.keymap.set('n', '<leader>dd', ':Gvdiffsplit<CR>')
 vim.keymap.set('n', '<leader>dh', ':diffget //2<CR>')
 vim.keymap.set('n', '<leader>dl', ':diffget //3<CR>')
+
+-- fix :W issue
+vim.keymap.set('n', ':W<CR>', ':w<CR>')
+
+-- window commands
+vim.keymap.set('n', '<leader>ww', '<C-w>w')
+vim.keymap.set('n', '<leader>wv', '<C-w>v<C-w>w')
+vim.keymap.set('n', '<leader>wh', '<C-w>s<C-w>w')
+
+vim.keymap.set('i', '<M-BS>', '<C-w>')
+
+
