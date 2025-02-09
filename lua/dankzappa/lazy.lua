@@ -22,6 +22,8 @@ require("lazy").setup({
 
     "nvim-telescope/telescope.nvim",
 
+    'nvim-pack/nvim-spectre',
+
     'ThePrimeagen/harpoon',
 
     'm4xshen/autoclose.nvim',
